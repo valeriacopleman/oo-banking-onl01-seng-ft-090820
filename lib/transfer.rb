@@ -21,7 +21,7 @@ class Transfer
       @status = "complete"
     end
     while
-      @status = "rejected"
+      @status = "rejected" do
       return "Transaction rejected. Please check your account balance."
     end
   end
