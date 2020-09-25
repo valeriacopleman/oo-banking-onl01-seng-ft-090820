@@ -25,7 +25,7 @@ class Transfer
       else person == @receiver
         person.balance += @amount
       end
-    end
+    
   end
     
 
