@@ -23,7 +23,6 @@ class Transfer
       @status = "rejected"
       puts "Transaction rejected. Please check your account balance."
     elsif @status == "complete"
-      puts "Transaction was already excuted"
       @status = "pending"
     end
   end
