@@ -14,8 +14,14 @@ class Transfer
     @sender.valid? && @receiver.valid? ? true : false
   end 
 
- def execute_transaction
-
+  def execute_transaction
+    while @sender.valid == true { |transfer|
+    @sender.balance -= @amount 
+    @receiver.balance += @amount}
+  else
+    puts "Transaction rejected. Please check your account balance."
+  end
+end
   
   def reverse_transfer
     if @status == "complete"
