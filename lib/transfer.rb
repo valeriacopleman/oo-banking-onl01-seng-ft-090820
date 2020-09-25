@@ -26,6 +26,7 @@ class Transfer
         person.balance += @amount
       end
     end
+end
     
 
   def reverse_transfer
