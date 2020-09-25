@@ -15,7 +15,7 @@ class Transfer
   end 
 
   def execute_transaction
-    while @sender.valid == true { |transfer|
+    if @sender.valid == true { |transfer|
     @sender.balance -= @amount 
     @receiver.balance += @amount }
   else
