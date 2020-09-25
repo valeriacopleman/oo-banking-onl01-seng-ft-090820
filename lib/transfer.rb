@@ -25,7 +25,7 @@ class Transfer
       elsif person == @receiver
         person.balance += @amount
       end
-    
+    end
   end
     
 
@@ -36,5 +36,5 @@ class Transfer
       @status = "reversed"
     end
   end
-end
+
 end
