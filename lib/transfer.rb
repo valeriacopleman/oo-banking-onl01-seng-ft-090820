@@ -28,9 +28,7 @@ class Transfer
     end
   end
     
-  end
-end
-end
+
 
   def reverse_transfer
     if @status == "complete"
