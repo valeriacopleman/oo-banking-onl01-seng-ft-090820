@@ -25,6 +25,8 @@ class Transfer
     elsif @status == "complete"
       puts "Transaction was already excuted"
       @status = "pending"
+    else !@account.valid?
+      @status = "rejected"
     end
   end
   
