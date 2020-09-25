@@ -19,12 +19,11 @@ class Transfer
       @sender.balance -= @amount
       @receiver.balance += amount
       @status = "complete"
-      elsif @status == "complete"
-      puts "Transaction was already excuted"
     elsif @sender.balance < @amount 
       @status = "rejected"
       puts "Transaction rejected. Please check your account balance."
-    else
+    elsif @status == "complete"
+      puts "Transaction was already excuted"
       @status = "pending"
     end
   end
