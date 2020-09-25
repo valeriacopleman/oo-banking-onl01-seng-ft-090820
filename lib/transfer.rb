@@ -14,19 +14,19 @@ class Transfer
     @sender.valid? && @receiver.valid? ? true : false
   end
 
- def execute_transaction
+  def execute_transaction
     if !self.valid? && @sender.balance <= @amount 
       @status = "rejected" 
       @status = "Transaction rejected. Please check your account balance."
     elsif @status == "pending"
     BankAccount.all.map do | person |
-      if person == @sender 
+        if person == @sender 
         person.balance -= @amount 
       elsif person == @receiver
         person.balance += @amount
       end
-    end
-end
+    
+  end
     
 
   def reverse_transfer
