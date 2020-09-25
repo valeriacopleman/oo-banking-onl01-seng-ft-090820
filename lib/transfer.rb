@@ -26,7 +26,7 @@ class Transfer
         person.balance += @amount
       end
     
-  end
+  
     
 
 
